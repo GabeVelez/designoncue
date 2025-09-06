@@ -19,7 +19,7 @@ export default function Header() {
           <a href="#services" className="hover:text-slate-300 transition-colors">Services</a>
           <a href="#process" className="hover:text-slate-300 transition-colors">Process</a>
           <a href="#about" className="hover:text-slate-300 transition-colors">About</a>
-          <button className="bg-white text-slate-900 px-6 py-2 rounded-lg font-semibold hover:bg-slate-100 transition-colors">
+          <button className="bg-white text-slate-900 px-6 py-2 rounded-full font-semibold hover:bg-slate-100 transition-colors">
             Start a project
           </button>
         </nav>
@@ -48,7 +48,7 @@ export default function Header() {
             <a href="#services" className="block hover:text-slate-300 transition-colors">Services</a>
             <a href="#process" className="block hover:text-slate-300 transition-colors">Process</a>
             <a href="#about" className="block hover:text-slate-300 transition-colors">About</a>
-            <button className="w-full bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors">
+            <button className="w-full bg-white text-slate-900 px-6 py-3 rounded-full font-semibold hover:bg-slate-100 transition-colors">
               Start a project
             </button>
           </nav>

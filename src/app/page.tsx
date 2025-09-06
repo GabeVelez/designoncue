@@ -14,10 +14,10 @@ export default function Home() {
             We plan, design, and build websites in <strong>WordPress, Webflow, and Framer</strong>—with bold type, dark-mode aesthetics, and kinetic moments that make people <em>feel</em> your brand.
           </p>
           <div className="flex gap-4 justify-center">
-            <button className="bg-white text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors">
+            <button className="bg-white text-slate-900 px-8 py-3 rounded-full font-semibold hover:bg-slate-100 transition-colors">
               Start a project
             </button>
-            <button className="border border-slate-500 text-white px-8 py-3 rounded-lg hover:bg-slate-800 transition-colors">
+            <button className="border border-slate-500 text-white px-8 py-3 rounded-full hover:bg-slate-800 transition-colors">
               See work
             </button>
           </div>
@@ -156,7 +156,7 @@ export default function Home() {
           <p className="text-xl text-slate-300 mb-8">
             Websites that look sharp <em>and</em> ship fast—backed by a repeatable process.
           </p>
-          <button className="border border-slate-500 text-white px-8 py-3 rounded-lg hover:bg-slate-800 transition-colors">
+          <button className="border border-slate-500 text-white px-8 py-3 rounded-full hover:bg-slate-800 transition-colors">
             View case studies
           </button>
         </div>
@@ -171,7 +171,7 @@ export default function Home() {
           <p className="text-xl text-slate-300 mb-8">
             Let&apos;s set up your design queue and get your first build moving.
           </p>
-          <button className="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-slate-100 transition-colors">
+          <button className="bg-white text-slate-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-slate-100 transition-colors">
             Start a project
           </button>
         </div>
