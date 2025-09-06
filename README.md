@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DesignOnCue
+
+A modern design studio website built with Next.js and headless WordPress. This project showcases branding, web design, logo design, and graphic design services.
+
+## Features
+
+- **Next.js 15** with TypeScript and App Router
+- **Tailwind CSS** for styling
+- **Headless WordPress Integration** ready for content management
+- **Responsive Design** optimized for all devices
+- **SEO Optimized** with proper meta tags and structure
+- **Vercel Ready** for deployment
+
+## Tech Stack
+
+- **Frontend**: Next.js 15, TypeScript, Tailwind CSS
+- **CMS**: WordPress (headless setup)
+- **Hosting**: Vercel
+- **Data Fetching**: WordPress REST API / GraphQL
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## WordPress Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Copy `.env.local.example` to `.env.local`
+2. Update the `WORDPRESS_URL` with your WordPress site URL
+3. Ensure your WordPress site has the REST API enabled
 
-## Learn More
+```bash
+cp .env.local.example .env.local
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/                 # Next.js App Router pages
+├── lib/                 # Utility functions and API clients
+│   └── wordpress.ts     # WordPress API integration
+└── components/          # Reusable React components (to be added)
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## WordPress Integration
 
-## Deploy on Vercel
+The project includes a WordPress API client in `src/lib/wordpress.ts` that provides:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `getPosts()` - Fetch blog posts
+- `getPost(slug)` - Fetch single post by slug
+- `getPages()` - Fetch all pages
+- `getPage(slug)` - Fetch single page by slug
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+### Vercel (Recommended)
+
+1. Connect your GitHub repository to Vercel
+2. Add your environment variables in the Vercel dashboard
+3. Deploy!
+
+### Manual Deployment
+
+```bash
+npm run build
+npm start
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## License
+
+This project is private and proprietary to DesignOnCue.

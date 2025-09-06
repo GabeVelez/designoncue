@@ -68,7 +68,7 @@ export default function Home() {
             Ready to Start Your Project?
           </h2>
           <p className="text-slate-600 mb-8">
-            Let's discuss how we can help bring your vision to life.
+            Let&apos;s discuss how we can help bring your vision to life.
           </p>
           <button className="bg-slate-900 text-white px-8 py-3 rounded-lg hover:bg-slate-800 transition-colors">
             Get In Touch
