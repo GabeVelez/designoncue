@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local materials and design files
+/materials
+*.ai
+*.pdf
+firebase-debug.log
