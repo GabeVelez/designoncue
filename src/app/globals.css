@@ -84,4 +84,9 @@ a:hover {
 
 button {
   transition: var(--transition-fast);
+  font-family: var(--font-body);
+}
+
+* {
+  font-family: var(--font-body);
 }
