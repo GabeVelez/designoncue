@@ -21,7 +21,7 @@ export default function Home() {
               style={{
                 backgroundColor: 'var(--brand-dark-burgundy)',
                 color: 'var(--brand-yellow)',
-                borderRadius: '3px'
+                borderRadius: '999px'
               }}
             >
               Start a project
@@ -32,7 +32,7 @@ export default function Home() {
                 backgroundColor: 'transparent',
                 color: 'var(--brand-orange)',
                 border: '2px solid var(--brand-orange)',
-                borderRadius: '3px'
+                borderRadius: '999px'
               }}
               onMouseOver={(e) => {
                 e.currentTarget.style.backgroundColor = 'var(--brand-orange)';
@@ -187,7 +187,7 @@ export default function Home() {
               backgroundColor: 'transparent',
               color: 'var(--brand-orange)',
               border: '2px solid var(--brand-orange)',
-              borderRadius: '3px'
+              borderRadius: '999px'
             }}
             onMouseOver={(e) => {
               e.currentTarget.style.backgroundColor = 'var(--brand-orange)';
@@ -217,7 +217,7 @@ export default function Home() {
             style={{
               backgroundColor: 'var(--brand-dark-burgundy)',
               color: 'var(--brand-yellow)',
-              borderRadius: '3px'
+              borderRadius: '999px'
             }}
           >
             Start a project

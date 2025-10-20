@@ -72,7 +72,7 @@ export default function Header() {
             style={{
               backgroundColor: 'var(--brand-orange)',
               color: 'var(--brand-dark-burgundy)',
-              borderRadius: '3px'
+              borderRadius: '999px'
             }}
           >
             Start a project
@@ -141,7 +141,7 @@ export default function Header() {
               style={{
                 backgroundColor: 'var(--brand-orange)',
                 color: 'var(--brand-dark-burgundy)',
-                borderRadius: '3px'
+                borderRadius: '999px'
               }}
             >
               Start a project
