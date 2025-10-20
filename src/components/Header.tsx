@@ -1,32 +1,88 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const linkStyle = {
+    color: 'var(--brand-orange)',
+    transition: 'color 0.2s ease'
+  };
+
+  const handleMouseOver = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.currentTarget.style.color = 'var(--brand-yellow)';
+  };
+
+  const handleMouseOut = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.currentTarget.style.color = 'var(--brand-orange)';
+  };
+
   return (
-    <header className="bg-slate-900 text-white border-b border-slate-800">
+    <header style={{ backgroundColor: 'var(--brand-dark-burgundy)' }}>
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="text-2xl font-bold">
-          DesignOnCue
+        <div className="flex items-center">
+          <Image
+            src="/images/logo.svg"
+            alt="DesignOnCue"
+            width={180}
+            height={35}
+            priority
+          />
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#work" className="hover:text-slate-300 transition-colors">Work</a>
-          <a href="#services" className="hover:text-slate-300 transition-colors">Services</a>
-          <a href="#process" className="hover:text-slate-300 transition-colors">Process</a>
-          <a href="#about" className="hover:text-slate-300 transition-colors">About</a>
-          <button className="px-6 py-2 rounded-full font-semibold transition-colors text-white hover:opacity-90" style={{ backgroundColor: '#FF13F0' }}>
+          <a
+            href="#work"
+            style={linkStyle}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
+          >
+            Work
+          </a>
+          <a
+            href="#services"
+            style={linkStyle}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
+          >
+            Services
+          </a>
+          <a
+            href="#process"
+            style={linkStyle}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
+          >
+            Process
+          </a>
+          <a
+            href="#about"
+            style={linkStyle}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
+          >
+            About
+          </a>
+          <button
+            className="px-6 py-2 font-semibold uppercase transition-all hover:opacity-90"
+            style={{
+              backgroundColor: 'var(--brand-orange)',
+              color: 'var(--brand-dark-burgundy)',
+              borderRadius: '3px'
+            }}
+          >
             Start a project
           </button>
         </nav>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden"
+          style={{ color: 'var(--brand-orange)' }}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -42,13 +98,52 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-slate-800 border-t border-slate-700">
+        <div style={{ backgroundColor: 'var(--brand-light-burgundy)' }}>
           <nav className="px-4 py-4 space-y-4">
-            <a href="#work" className="block hover:text-slate-300 transition-colors">Work</a>
-            <a href="#services" className="block hover:text-slate-300 transition-colors">Services</a>
-            <a href="#process" className="block hover:text-slate-300 transition-colors">Process</a>
-            <a href="#about" className="block hover:text-slate-300 transition-colors">About</a>
-            <button className="w-full px-6 py-3 rounded-full font-semibold transition-colors text-white hover:opacity-90" style={{ backgroundColor: '#FF13F0' }}>
+            <a
+              href="#work"
+              className="block"
+              style={linkStyle}
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
+              Work
+            </a>
+            <a
+              href="#services"
+              className="block"
+              style={linkStyle}
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
+              Services
+            </a>
+            <a
+              href="#process"
+              className="block"
+              style={linkStyle}
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
+              Process
+            </a>
+            <a
+              href="#about"
+              className="block"
+              style={linkStyle}
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
+              About
+            </a>
+            <button
+              className="w-full px-6 py-3 font-semibold uppercase transition-all hover:opacity-90"
+              style={{
+                backgroundColor: 'var(--brand-orange)',
+                color: 'var(--brand-dark-burgundy)',
+                borderRadius: '3px'
+              }}
+            >
               Start a project
             </button>
           </nav>
