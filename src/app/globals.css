@@ -1,8 +1,48 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* DesignOnCue Brand Colors (from DOCtheme) */
+  --brand-orange: #FBAD3C;
+  --brand-yellow: #FFF0A4;
+  --brand-burgundy: #651F14;
+  --brand-terracotta: #B64A26;
+  --brand-burgundy-light: #8D2C1D;
+
+  /* Neutrals */
+  --deep-charcoal: #1A1A1A;
+  --medium-gray: #666666;
+  --light-gray: #E5E5E5;
+  --off-white: #F9F9F9;
+  --pure-white: #FFFFFF;
+
+  /* Semantic Colors */
+  --success-green: #28A745;
+  --error-red: #DC3545;
+  --info-blue: #17A2B8;
+
+  /* Background & Foreground (Signature DesignOnCue look) */
+  --background: #FFF0A4; /* Soft Yellow background */
+  --foreground: #651F14; /* Deep Burgundy text */
+
+  /* Typography */
+  --font-heading: "Futura PT", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Spacing (rem-based) */
+  --spacing-xs: 0.5rem;   /* 8px */
+  --spacing-sm: 1rem;     /* 16px */
+  --spacing-md: 1.5rem;   /* 24px */
+  --spacing-lg: 2rem;     /* 32px */
+  --spacing-xl: 3rem;     /* 48px */
+
+  /* Border Radius */
+  --radius-sm: 3px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  /* Transitions */
+  --transition-fast: all 0.1s ease-in-out;
+  --transition-normal: all 0.3s ease-in-out;
 }
 
 @theme inline {
@@ -10,17 +50,39 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Brand color mappings for Tailwind */
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-burgundy: var(--brand-burgundy);
+  --color-brand-terracotta: var(--brand-terracotta);
+  --color-brand-burgundy-light: var(--brand-burgundy-light);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  line-height: 1.625;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--brand-burgundy);
+  line-height: 1.2;
+}
+
+a {
+  transition: var(--transition-fast);
+  color: var(--brand-burgundy);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--brand-orange);
+}
+
+button {
+  transition: var(--transition-fast);
 }
