@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Questrial } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const questrial = Questrial({
+  weight: "400",
+  variable: "--font-questrial",
   subsets: ["latin"],
 });
 
@@ -26,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${questrial.variable} antialiased`}
       >
         <Header />
         {children}
